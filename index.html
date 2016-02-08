@@ -3,9 +3,10 @@
 <head>
 
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
- -->	<link href="https://raw.githubusercontent.com/WxnChen11/WebApp/master/style.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link href='http://fonts.googleapis.com/css?family=Michroma|Monda|Exo|Montserrat|Fjalla+One|Quantico' rel='stylesheet' type='text/css'>
+ -->	
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link href="https://cdn.rawgit.com/WxnChen11/WebApp/master/style.css" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Michroma|Monda|Exo|Montserrat|Fjalla+One|Quantico' rel='stylesheet'>
 
 <title>Shortest Distance Finder</title>
 
@@ -15,7 +16,7 @@
 <h1>Shortest Distance Finder</h1>
 </div>
 
-<img src="C:\Users\Wenxin\Documents\School\University\Utek\FrontEnd\flaskr\logo_utek.png" alt="Logo UTEK" id="uteklogo"\>
+<img src="https://raw.githubusercontent.com/WxnChen11/WebApp/webhost/logo_utek.png" alt="Logo UTEK" id="uteklogo"\>
 
 <!-- <body>
   Start Address:<br>
@@ -37,7 +38,7 @@
 
 <button type="button" onclick="submit()" class="btn btn-default" id="btn">Submit</button>
 
-<p><img id = "loading" src="./placeholder.png"></p>
+<p><img id = "loading" src="https://raw.githubusercontent.com/WxnChen11/WebApp/webhost/static/placeholder.png"></p>
 <p id="res">Enter Addresses Above</p>
 
 
@@ -47,7 +48,7 @@
 function submit()
 {
 
-document.getElementById("loading").src = "C:\\Users\\Wenxin\\Documents\\School\\University\\Utek\\FrontEnd\\flaskr\\loader2.gif";
+document.getElementById("loading").src = "https://raw.githubusercontent.com/WxnChen11/WebApp/webhost/loader2.gif";
 
 document.getElementById("res").innerHTML = "Please Wait";
 
@@ -70,7 +71,7 @@ httpGetAsync(url, function (response){
 	document.getElementById("res").innerHTML =("The shortest distance between " + start + " and " + end + " is " + Math.round(sd*100)/100 + " km");
 	}
 	
-	document.getElementById("loading").src = "C:\\Users\\Wenxin\\Documents\\School\\University\\Utek\\FrontEnd\\flaskr\\placeholder.png";
+	document.getElementById("loading").src = "https://raw.githubusercontent.com/WxnChen11/WebApp/webhost/static/placeholder.png";
 
 });
 
