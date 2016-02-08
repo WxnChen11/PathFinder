@@ -55,13 +55,14 @@ text-align:center;
 }
 
 #res{
+	display:block;
 	text-align:center;
-	margin-top:5px;
-	margin-bottom:50px;
+	margin-top:10px;
+	margin-bottom:20px;
 }
 
 #loading{
-	margin-top:25px;
+	margin-top:15px;
 	display:block;
 	margin-right:auto;
 	margin-left:auto;
