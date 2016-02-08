@@ -55,9 +55,10 @@ text-align:center;
 }
 
 #res{
+	style
 	display:block;
 	text-align:center;
-	margin-top:10px;
+	margin-top:-15px;
 	margin-bottom:20px;
 }
 
