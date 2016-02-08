@@ -55,6 +55,7 @@ text-align:center;
 }
 
 #res{
+	font-weight: bold;
 	display:block;
 	text-align:center;
 	margin-top:10px;
