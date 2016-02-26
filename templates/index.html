@@ -7,7 +7,7 @@
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<!-- https://cdn.rawgit.com/WxnChen11/WebApp/webhost/static/style.css -->
 		<!-- <link href="https://rawgit.com/WxnChen11/WebApp/webhost/static/style.css" rel="stylesheet" type="text/css"> -->
-        <link href="static/style.css">
+        <link href="https://rawgit.com/WxnChen11/textFiles/master/style.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Michroma|Monda|Exo|Montserrat|Fjalla+One|Quantico' rel='stylesheet'>
         <link href="https://cdn.rawgit.com/nostalgiaz/bootstrap-switch/master/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet">
 
@@ -32,7 +32,7 @@
 </body> -->
 
 <div class="pic" id="bg">
-<img src="fondo4.jpg" class="img-responsive" alt="Responsive image">
+<img src="https://newevolutiondesigns.com/images/freebies/white-wallpaper-18.jpg" class="img-responsive" alt="Responsive image">
 </div>
 
 
@@ -73,7 +73,7 @@
 <p>&nbsp</p>
 
 
-<p><img id = "loading" src="https://raw.githubusercontent.com/WxnChen11/WebApp/webhost/static/placeholder.png"></p>
+<p><img id = "loading" src="https://raw.githubusercontent.com/WxnChen11/textFiles/master/placeholder.png"></p>
 <h3 id="res">Enter Addresses Above</h3>
 
 
@@ -83,14 +83,13 @@
 function submit()
 {
 
-document.getElementById("loading").src = "https://raw.githubusercontent.com/WxnChen11/WebApp/webhost/loader2.gif";
+document.getElementById("loading").src = "https://raw.githubusercontent.com/WxnChen11/textFiles/master/anim_trans.gif";
 
 document.getElementById("res").innerHTML = "Please Wait";
 
     var mode;
 
-    if ($("[name='my-checkbox']").state == true) {
-
+    if ($('input[name="my-checkbox"]').bootstrapSwitch('state') == true) {
         mode = "astar";
     } else {
         mode = "dijkstras";
@@ -115,7 +114,7 @@ httpGetAsync(url, function (response){
 	document.getElementById("res").innerHTML =("The shortest distance between " + start + " and " + end + " is " + Math.round(sd*100)/100 + " km");
 	}
 	
-	document.getElementById("loading").src = "https://raw.githubusercontent.com/WxnChen11/WebApp/webhost/static/placeholder.png";
+	document.getElementById("loading").src = "https://raw.githubusercontent.com/WxnChen11/textFiles/master/placeholder.png";
 
 });
 

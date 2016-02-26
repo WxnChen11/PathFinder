@@ -1,20 +1,20 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import os
 import networkx
 #os.chdir("C:\\Users\\Wenxin\\Documents\\School\\University\\Utek\\pyshp-1.2.3")
-os.chdir(r"C:\Users\Wenxin\Documents\School\University\Utek\pyshp-1.2.3")
+#os.chdir(r"C:\Users\Wenxin\Documents\School\University\Utek\pyshp-1.2.3")
 
 import shapefile
 
-ap_sf = shapefile.Reader(r"C:\Users\Wenxin\Documents\School\University\Utek\address_points\ADDRESS_POINT_WGS84.dbf")
+ap_sf = shapefile.Reader(r"\address_points\ADDRESS_POINT_WGS84.dbf")
 
 ap_shapes = ap_sf.shapes()
 
-cl_sf = shapefile.Reader(r"C:\Users\Wenxin\Documents\School\University\Utek\centreline\CENTRELINE_WGS84.dbf")
+cl_sf = shapefile.Reader(r"\centreline\CENTRELINE_WGS84.dbf")
 
 cl_shapes = cl_sf.shapes()
 
-clint_sf = shapefile.Reader(r"C:\Users\Wenxin\Documents\School\University\Utek\centreline_intersection\CENTRELINE_INTERSECTION_WGS84.dbf")
+clint_sf = shapefile.Reader(r"\centreline_intersection\CENTRELINE_INTERSECTION_WGS84.dbf")
 
 clint_shapes = clint_sf.shapes()
 
@@ -84,7 +84,7 @@ for i in range(len(clint_records)):
 
     G.add_node(clint_records[i][0], lon = clint_records[i][15], lat = clint_records[i][16]) #LONGITUDE THEN LATITUDE
     
-print(G.node[13468164])
+#print(G.node[13468164])
 
 from math import sin, asin, cos, sqrt, atan2, radians
 def haversine_d(lat1,lat2,lon1,lon2):
@@ -102,7 +102,7 @@ def haversine_d(lat1,lat2,lon1,lon2):
     #d = 2*(6371)*asin(sqrt((sin(dlat/2))**2)+ cos(lat1)*cos(lat2)*(sin((dlon)/2)))
     return (d)
 
-print(haversine_d( 43.659726,43.666035, -79.397320,-79.398792))
+#print(haversine_d( 43.659726,43.666035, -79.397320,-79.398792))
 
 l = [201200, 201201, 201300, 201301, 201400, 201401, 201500, 201600, 201601, 201700, 201800]
 
@@ -348,11 +348,15 @@ def StrPath(start, dest):
     return distance, previous
         
 app = Flask("ShortestDistanceFinder")
+#app = Flask(static_folder=r"C:\Users\Wenxin\Documents\School\University\Utek\FrontEnd\flaskr",import_name="ShortestDistanceFinder" )
 
 @app.route('/')
+#def main():
+    
+    #return render_template("index.html")
 def root():
     #return open(r"index.html").read()
-    return open(r"C:\Users\Wenxin\Documents\School\University\Utek\FrontEnd\flaskr\index.html").read()
+    return open(r"C:\Users\Wenxin\Documents\School\University\Utek\FrontEnd\FlaskApp\index.html").read()
     
 @app.route('/add')
 def add():
@@ -365,6 +369,7 @@ def add():
     print(d)
     return jsonify({'shortestdistance':d, 'start':n1, 'end':n2})
     
+    
 if __name__ == '__main__':
-     app.run(host="127.0.0.1", port=5001)
-
+    #app.run(host="127.0.0.1", port=5001)
+    app.run(host="35.2.59.247", port=5001)
